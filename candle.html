@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Make a Wish!</title>
+  <style>
+    body {
+        background: radial-gradient(circle 500px at center, rgb(226, 15, 15), rgb(104, 7, 7));
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    .wish-input {
+      margin-bottom: 20px;
+      padding: 10px;
+      font-size: 16px;
+      border: 2px solid #e74c3c;
+      border-radius: 5px;
+      position: relative; 
+      z-index: 1;
+    }
+
+    .cake {
+      position: relative;
+      width: 250px; 
+      height: 120px;
+      background-color: #a1a8d3;
+      border-radius: 15px; 
+      margin-bottom: 20px; 
+      transition: background-color 0.3s ease; 
+      z-index: 0;
+    }
+
+    .candle {
+      position: absolute;
+      width: 10px;
+      height: 30px; 
+      background-color: #ffcc00;
+      border-radius: 5px; 
+      top: -30px;
+      animation: flicker 1s infinite; 
+      z-index: 1; 
+    }
+
+    .candle:nth-child(1) {
+      left: 40px;
+    }
+
+    .candle:nth-child(2) {
+      left: 110px; 
+    }
+
+    .candle:nth-child(3) {
+      left: 180px;
+    }
+
+    @keyframes flicker {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.5; 
+      }
+    }
+
+    .disappear {
+      display: none; 
+    }
+
+    .wish-gif {
+      width: 200px;
+      height: auto; 
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Make a Wish!</h1>
+  <input type="text" class="wish-input" id="wishInput" placeholder="MAKEEE AAA WWIISH">
+  
+  <div class="cake" id="cake" onclick="blowOutCandles()">
+    <div class="candle" id="candle1"></div>
+    <div class="candle" id="candle2"></div>
+    <div class="candle" id="candle3"></div>
+  </div>
+
+  <img src="./08536ee62c04cf7f03548c087cc75a40.gif" alt="Birthday Wish GIF" class="wish-gif">
+
+  <script>
+    function blowOutCandles() {
+      const candles = [document.getElementById('candle1'), document.getElementById('candle2'), document.getElementById('candle3')];
+      const wishInput = document.getElementById('wishInput');
+      
+      if (wishInput.value.trim() === '') {
+        alert("You have to wish >:c");
+      } else {
+        
+        candles.forEach(candle => {
+          candle.classList.add('disappear');
+        });
+        alert("IT WILL COME TRUE!! IT BETTER!");
+      }
+    }
+  </script>
+</body>
+</html>

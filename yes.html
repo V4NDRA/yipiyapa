@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birth Date Checker</title>
+  <style>
+    body {
+        background: radial-gradient(circle 500px at center, rgb(226, 15, 15), rgb(104, 7, 7));
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #333;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    .input-group {
+      margin-bottom: 20px;
+    }
+
+    input[type="date"] {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      background-color: #28a745;
+      color: white;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #218838; 
+    }
+  </style>
+</head>
+<body>
+  <h1>Enter Your Birth Date</h1>
+  <div class="input-group">
+    <input type="date" id="birthDate" required>
+  </div>
+  <button onclick="checkBirthDate()">Check Date</button>
+
+  <script>
+    function checkBirthDate() {
+      const birthDateInput = document.getElementById("birthDate").value;
+      const specificDate = "2006-10-26"; 
+
+      if (birthDateInput === specificDate) {
+        alert("YOU ARE MY POOKIEE");{
+        window.location.href = "main.html";
+        }
+      } else {
+        alert("My pookie wasnt born on" + birthDateInput + "!, GET OUT");
+      }
+    }
+  </script>
+</body>
+</html>

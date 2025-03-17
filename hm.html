@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confirmation Page</title>
+  <style>
+    body {
+        background: radial-gradient(circle 500px at center, rgb(226, 15, 15), rgb(104, 7, 7));
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: white;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2em;
+    }
+
+    .gif {
+      width: 200px; 
+      height: auto;
+      margin: 20px 0;
+    }
+
+    .button {
+      padding: 10px 20px;
+      margin: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      text-decoration: none;
+      border: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      color: white; 
+      display: inline-block;
+    }
+
+    .yes {
+      background-color: green;
+    }
+
+    .no {
+      background-color: red;
+    }
+
+    .yes:hover{
+        background-color: darkgreen; 
+    }
+    
+    
+
+    .no:hover {
+      background-color: darkred;
+    }
+  </style>
+</head>
+<body>
+  <h1>Are you Dati?</h1>
+  <img src="./955ff5a8873d6a1160edfdd01fd676fe.gif" alt="Confirmation GIF" class="gif"> 
+  <div>
+    <a href="yes.html" class="button yes">Yes</a> 
+    <a href="no.html" class="button no">No</a> 
+  </div>
+</body>
+</html>

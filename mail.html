@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confirmation Page</title>
+  <style>
+    body {
+    background: radial-gradient(circle 500px at center, rgb(226, 15, 15), rgb(104, 7, 7));
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: white;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2em;
+    }
+
+    .gif {
+      width: 200px; 
+      height: auto; 
+      margin: 20px 0;
+    }
+
+    .button {
+      padding: 10px 20px;
+      margin: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .yes {
+      background-color: green;
+      color: white;
+    }
+
+    .no {
+      background-color: red;
+      color: white;
+      transition: transform 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+  <h1>Do you love someone called Mira??</h1>
+  <img src="./a23b0a4f9fbc7178165a6bba92b6cbc2.gif" alt="Confirmation GIF" class="gif">
+  <div>
+    <button class="button yes" onclick="confirmAction()">Yes</button>
+    <button class="button no" onmouseover="teleport(this)">No</button>
+  </div>
+
+  <script>
+    function confirmAction() {
+      alert("You physically cannot say no :33333");{
+           window.location.href = "verymain.html"; 
+      }
+      
+     
+    }
+
+    function teleport(button) {
+      const bodyWidth = document.body.clientWidth;
+      const bodyHeight = document.body.clientHeight;
+      const randomX = Math.random() * (bodyWidth - button.clientWidth);
+      const randomY = Math.random() * (bodyHeight - button.clientHeight);
+
+      button.style.position = 'absolute';
+      button.style.left = randomX + 'px';
+      button.style.top = randomY + 'px';
+    }
+  </script>
+</body>
+</html>
